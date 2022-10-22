@@ -18,8 +18,8 @@ function App() {
 	{!started && <button onClick={() => {setStarted(true)}}>Start Image Tracking</button>}
 	{started && <button onClick={() => {setStarted(false)}}>Stop Image Tracking</button>}
 
-  /*{!started && <button onClick={() => {setStarted(true)}}>Start Multi-Target</button>}
-	{started && <button onClick={() => {setStarted(false)}}>Stop Multi-Target</button>}*/
+  {!started && <button onClick={() => {setStarted(true)}}>Start Multi-Target</button>}
+	{started && <button onClick={() => {setStarted(false)}}>Stop Multi-Target</button>}
       </div>
 
       {started == true && (
