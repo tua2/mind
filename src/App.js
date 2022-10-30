@@ -10,19 +10,15 @@ import 'mind-ar/dist/mindar-image-three.prod.js';
 
 function App() {
   const [started, setStarted] = useState(false);
-<<<<<<< HEAD
   const [targeted, setTargeted] = useState(false);
   const [tracked, setTracked] = useState(false);
 
-=======
 /*const [click_type, setClickType]=useState("");*/
->>>>>>> a64127d142caf1a4e1488ad9f085ce98cb8b70ae
   return (
     <div className="App">
       <h1>Example React component with <a href="https://github.com/hiukim/mind-ar-js" target="blank">MindAR</a></h1>
 
       <div>
-<<<<<<< HEAD
 	   {!started && <button onClick={() => {setStarted(true)}}>Start Image Tracking</button>}
 	   {started && <button onClick={() => {setStarted(false)}}>Stop Image Tracking</button>}
      </div>
@@ -59,33 +55,7 @@ function App() {
 	    </div>
       )}
 
-=======
-	{!started && <button onClick={() => {setStarted(true)}}>Start Image Tracking</button>}
-	{started && <button onClick={() => {setStarted(false)}}>Stop Image Tracking</button>}
-
-  {!started && <button onClick={() => {setStarted(true)}}>Start Multi-Target</button>}
-	{started && <button onClick={() => {setStarted(false)}}>Stop Multi-Target</button>}
-      </div>
-
-      {started == true && (
-	<div className="container">
-	  <MindARViewer/>
-    
-	  <video></video>
-	</div>
-
-      )
-}
-
-{started == true && (
-<div className="container">
-	  <multiTarget/>
-    
-	  <video></video>
-	</div>
-)}
->>>>>>> a64127d142caf1a4e1488ad9f085ce98cb8b70ae
-    </div>
+</div>
   );
 }
 
