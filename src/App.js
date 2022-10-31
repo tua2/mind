@@ -28,8 +28,8 @@ function App() {
         </div>
   
            <div> 
-          {!tracked && <button onClick={() => {setTracked(true)}}>Start Multi-Target</button>}
-        	{tracked && <button onClick={() => {setTracked(false)}}>Stop Multi-Target</button>}
+          {!tracked && <button onClick={() => {setTracked(true)}}>Start Multi-Track</button>}
+        	{tracked && <button onClick={() => {setTracked(false)}}>Stop Multi-Track</button>}
            </div>
          
     
