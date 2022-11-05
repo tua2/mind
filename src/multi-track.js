@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-export default () => {
+const MultiTrack = () => {
   const sceneRef = useRef(null);
 
   useEffect(() => {
@@ -32,3 +32,4 @@ export default () => {
     </a-scene>
   )
 }
+export default MultiTrack;

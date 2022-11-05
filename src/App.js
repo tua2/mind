@@ -4,8 +4,8 @@ import 'aframe';
 import 'mind-ar/dist/mindar-image-aframe.prod.js';
 import './App.css';
 import MindARViewer from './mindar-viewer';
-import multiTarget from './multi-target';
-import multiTrack from './multi-track';
+import MultiTarget from './multi-target';
+import MultiTrack from './multi-track';
 import 'mind-ar/dist/mindar-image-three.prod.js';
 
 function App() {
@@ -21,16 +21,17 @@ function App() {
       <div>
 	   {!started && <button onClick={() => {setStarted(true)}}>Start Image Tracking</button>}
 	   {started && <button onClick={() => {setStarted(false)}}>Stop Image Tracking</button>}
-     </div>
-         <div>
-           {!targeted && <button onClick={() => {setTargeted(true)}}>Start Multi-Target</button>}
-	         {targeted && <button onClick={() => {setTargeted(false)}}>Stop Multi-Target</button>}
-        </div>
+     {/* </div> */}
+
+     {/* <div> */}
+      {!targeted && <button onClick={() => {setTargeted(true)}}>Start Multi-Target</button>}
+	    {targeted && <button onClick={() => {setTargeted(false)}}>Stop Multi-Target</button>}
+     {/* </div> */}
   
-           <div> 
-          {!tracked && <button onClick={() => {setTracked(true)}}>Start Multi-Track</button>}
-        	{tracked && <button onClick={() => {setTracked(false)}}>Stop Multi-Track</button>}
-           </div>
+     {/* <div>  */}
+     {!tracked && <button onClick={() => {setTracked(true)}}>Start Multi-Track</button>}
+     {tracked && <button onClick={() => {setTracked(false)}}>Stop Multi-Track</button>}
+     </div>
          
     
 
@@ -43,14 +44,14 @@ function App() {
 
       {targeted === true && (
 	    <div className="container">
-            <multiTarget/>
+            <MultiTarget/>
 	          <video></video>
 	    </div>
       )}
 
       {tracked === true && (
 	    <div className="container">
-            <multiTrack/>
+            <MultiTrack/>
 	          <video></video>
 	    </div>
       )}
